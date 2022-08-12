@@ -1,3 +1,4 @@
+create database Assignment;
 create database SQLassignment;
 
 create table OrderItem10
