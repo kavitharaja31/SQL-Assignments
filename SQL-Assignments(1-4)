@@ -1,4 +1,3 @@
-create database Assignment;
 create database SQLassignment;
 
 create table OrderItem10
@@ -67,28 +66,10 @@ suppliers varchar(30),
 stock varchar(40)
 )
 
-create index IndexOrderItemOrderId
-on OrderItem10(OrderId)
-
-create index IndexOrderItemProductId
-on OrderItem10(ProductId)
-
-create index IndexProductname
-on Product10(ProductName)
-
-create index IndexOrderCustomerId
-on Orders10(CustomerId)
-
-create index IndexOrderOrderDate
-on Orders10(OrderDate)
-
-create index IndexCustomerName
-on Customer10(FirstName , LastName)
-
-alter table OrderItem10 add constraint OrderItem10_OrderId10_FK1
+alter table OrderItem10 add constraint orderitem10_orderid_FK1
 foreign key (OrderId) references Orders10(Id)
 
-alter table OrderItem10 add constraint OrderItem10_ProductId_FK2
+alter table OrderItem10 add constraint orderitem10_productid_FK2
 foreign key (ProductId) references Product10(Id)
 
 alter table Orders10 add constraint orders10_customerid_FK
